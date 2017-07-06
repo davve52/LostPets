@@ -1,6 +1,15 @@
 <resources>
-    <string name="app_name">PetFinder</string>
+    <string name="app_name">Pet Finder</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="descHome">Hello this is the lost pets app, here you can search for your lost pets
+       \n
+        You can also help people find their lost pets!
+    </string>
+    <string name="findBtnInfo">Check the map for your lost pets</string>
+    <string name="lostBtnInfo">Publish your lost pets</string>
+    <string name="btnFind">Found pets</string>
+    <string name="btnLost">Lost pets</string>
+    <string name="logo">LOST PETERINO</string>
 </resources>

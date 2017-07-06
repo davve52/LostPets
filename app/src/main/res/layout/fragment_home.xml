@@ -1,13 +1,77 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bgFrame"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="david.anders.com.petfinder.HomeFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
 
-</FrameLayout>
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:contentDescription="Logo"
+        android:src="@drawable/petfinder"
+        app:srcCompat="@drawable/petfinder" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/descHome"
+        android:textColor="@android:color/background_light"
+        android:textSize="25sp"
+        android:paddingBottom="80sp"/>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:text="@string/findBtnInfo"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_light"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/btnFind"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20sp"
+        android:layout_marginRight="20sp"
+        android:layout_weight="1"
+        android:background="@drawable/my_button_bg"
+        android:text="@string/btnFind"
+        android:textColor="@android:color/holo_orange_light"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:text="@string/lostBtnInfo"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_light"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/btnLost"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="20sp"
+        android:layout_marginLeft="20sp"
+        android:layout_marginRight="20sp"
+        android:layout_weight="1"
+        android:background="@drawable/my_button_bg"
+        android:text="@string/lostBtnInfo"
+        android:textColor="@android:color/holo_orange_light"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+
+</LinearLayout>
