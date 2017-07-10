@@ -1,0 +1,25 @@
+{
+  "name": "lostpets",
+  "version": "1.0.0",
+  "description": "Api for our lost pets app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "*",
+    "mongoose": "*",
+    "cors": "*",
+    "body-parser": "*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davve52/LostPets.git"
+  },
+  "author": "David Anders",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/davve52/LostPets/issues"
+  },
+  "homepage": "https://github.com/davve52/LostPets#readme"
+}
