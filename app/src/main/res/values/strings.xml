@@ -12,4 +12,6 @@
     <string name="btnFind">Found pets</string>
     <string name="btnLost">Lost pets</string>
     <string name="logo">LOST PETERINO</string>
+    <string name="google_maps_key">AIzaSyDosXzKURjrxcV1qehQ3Mvbfoty8MIqoO4</string>
 </resources>
+
