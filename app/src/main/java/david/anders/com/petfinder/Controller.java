@@ -1,5 +1,7 @@
 package david.anders.com.petfinder;
 
+import android.app.Fragment;
+
 /**
  * Created by davve on 2017-07-05.
  */
@@ -14,5 +16,8 @@ public class Controller {
         homeFragment.setController(this);
         mainActivity.setFragment(homeFragment);
 
+    }
+    public void switchFragment(Fragment fragment){
+        mainActivity.setFragment(fragment);
     }
 }

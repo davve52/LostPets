@@ -1,6 +1,8 @@
 package david.anders.com.petfinder;
 
 
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.app.Fragment;
 import android.view.LayoutInflater;
@@ -19,6 +21,7 @@ public class HomeFragment extends Fragment {
     private Button btnLost;
     private Button btnFound;
     private Controller controller;
+
 
     public HomeFragment() {
         // Required empty public constructor
@@ -57,9 +60,10 @@ public class HomeFragment extends Fragment {
         public void onClick(View view) {
             switch (view.getId()){
                 case R.id.btnLost :
-                    System.out.println("BTN LOSt");
+                    System.out.println("BTN LOST");
                     break;
                 case R.id.btnFind :
+                    controller.switchFragment(new MapsFragment());
                     System.out.println("BTN FOUND");
                     break;
             }
