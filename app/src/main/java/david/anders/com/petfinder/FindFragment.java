@@ -1,6 +1,7 @@
 package david.anders.com.petfinder;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.app.Fragment;
 import android.view.LayoutInflater;
@@ -8,7 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.LinearLayout;
+
 
 
 /**
@@ -32,6 +33,7 @@ public class FindFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_find, container, false);
+        registerListener();
         initComponents(view);
         return view;
     }
@@ -45,5 +47,28 @@ public class FindFragment extends Fragment {
     }
     public void setController(Controller controller){
         this.controller = controller;
+    }
+
+    private void registerListener() {
+        btnImage.setOnClickListener(new ButtonListener());
+        btnPost.setOnClickListener(new ButtonListener());
+    }
+
+    private class ButtonListener implements View.OnClickListener {
+        @Override
+        public void onClick(View v) {
+            switch (v.getId()) {
+                case R.id.btnPost :
+                    String name = edName.getText().toString();
+                    String desc = edDesc.getText().toString();
+                    String phone = edPhone.getText().toString();
+                    break;
+                case R.id.btnImage :
+                    Intent i = new Intent(Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.INTERNAL_CONTENT_URI);
+                    final int ACTIVITY_SELECT_IMAGE = 1234;
+                    startActivityForResult(i, ACTIVITY_SELECT_IMAGE);
+                    break;
+            }
+        }
     }
 }
