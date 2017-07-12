@@ -9,11 +9,14 @@ import android.app.Fragment;
 public class Controller {
     private MainActivity mainActivity;
     private HomeFragment homeFragment;
+    private FindFragment findFragment;
 
     public Controller(MainActivity mainActivity){
         this.mainActivity = mainActivity;
         homeFragment = new HomeFragment();
         homeFragment.setController(this);
+        findFragment = new FindFragment();
+        findFragment.setController(this);
         mainActivity.setFragment(homeFragment);
 
     }

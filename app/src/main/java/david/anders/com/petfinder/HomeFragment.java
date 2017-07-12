@@ -61,6 +61,7 @@ public class HomeFragment extends Fragment {
             switch (view.getId()){
                 case R.id.btnLost :
                     System.out.println("BTN LOST");
+                    controller.switchFragment(new FindFragment());
                     break;
                 case R.id.btnFind :
                     controller.switchFragment(new MapsFragment());
