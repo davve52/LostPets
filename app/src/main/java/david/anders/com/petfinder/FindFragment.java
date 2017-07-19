@@ -82,6 +82,10 @@ public class FindFragment extends Fragment {
                     yourSelectedImage = BitmapFactory.decodeFile(filePath);
 
             /* Now you have choosen image in Bitmap format in object "yourSelectedImage". You can use it in way you want! */
+                    if(yourSelectedImage !=null){
+                        btnImage.setImageBitmap(yourSelectedImage);
+                        System.out.println("Image added");
+                    }
                 }
         }
 
@@ -99,8 +103,6 @@ public class FindFragment extends Fragment {
                     Intent i = new Intent(Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.INTERNAL_CONTENT_URI);
                     final int ACTIVITY_SELECT_IMAGE = 1234;
                     startActivityForResult(i, ACTIVITY_SELECT_IMAGE);
-
-                    btnImage.setImageBitmap(yourSelectedImage);
                     break;
             }
         }
